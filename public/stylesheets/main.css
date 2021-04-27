@@ -1,27 +1,192 @@
-.jumbotron {
-  background: #532F8C;
-  color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }
+body {
+  background-color: #fdfbd1;
+  color: #492a2d;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  min-height: auto;
+  margin: 0;
+  overflow-x: hidden;
+}
 
+.container {
+  margin: 0;
+  width: 100vw;
+}
+
+h1 {
+  margin: 0;
+  font-size: 12vw;
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fdfbd1;
+  font-family: "fantasy", fantasy;
+  text-shadow: 3px 3px maroon;
+}
+
+h2 {
+  margin: 0;
+  font-size: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fdfbd1;
+  font-family: "fantasy", fantasy;
+  text-shadow: 2px 2px maroon;
+  color:#fdfbd1;
+}
+
+.form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: medium;
+  border-color: #492a2d;
+}
+
+.form input {
+  padding: 0.5rem;
+  font-size: medium;
+  border-color: #492a2d;
+  background: #fdfbd1;
+  margin-right: 1rem;
+}
+
+.form button {
+  height: 44px;
+  font-size: medium;
+  padding: 0.5rem;
+  color: #492a2d;
+  background: #fdfbd1;
+  border-color: #492a2d;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.form select {
+  height: 44px;
+  padding: 0.5rem;
+  color: #492a2d;
+  font-size: medium;
+  border-color: #492a2d;
+  background: #fdfbd1;
+  cursor: pointer;
+}
+
+/* Sets the card container to 4 cards across when not in any breakpoints */
+#card-container {
+  display: grid;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox */
+  box-sizing: border-box;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 0;
+  background-color: #fdfbd1;
+  padding: 2rem;
+}
+
+#search-text {
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+#card-container a {
+  color: #492a2d;
+  text-decoration: none;
+}
+
+.breweryCard {
+  border: #492a2d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  font-family: arial;
+  height: 250px;
+}
+
+.breweryCard *:not(span){
+  padding-left: 1rem;
+}
+
+.breweryCard h3 {
+  padding-top: 1rem;
+  margin-top: 0;
+}
+
+.breweryCard:hover {
+  opacity: 0.7;
+}
+
+footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: auto;
+  bottom: 0px;
+  right: auto;
+  background-color: #492a2d;
+  color: #fdfbd1;
+  height: 30px;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+footer a {
+  color: #fdfbd1;
+  margin-left: .5rem;
+}
+
+
+/* Responsiveness handling */
+@media screen and (max-width: 1024px) {
+  #card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-areas: 
+    'city city'
+    'state state'
+    'span1 span2';
+    justify-items: center;
+  }
+
+  #city-search {
+    grid-area: city;
+    margin-right: 0;
+  }
+
+  #state-search {
+    grid-area: state;
+    margin-right: 0;
+  }
+
+  .form button {
+    grid-area: span1;
+  }
+
+  .form select {
+    grid-area: span2;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #card-container {
+    grid-template-columns: 1fr;
+  }
+}
