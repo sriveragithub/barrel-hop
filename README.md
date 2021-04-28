@@ -1,39 +1,20 @@
-# node-js-getting-started
+# Barrel Hop - Where is your next adventure?
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+What is the project? - Barrel Hop is a brewery search app created to allow users to do a quick search of breweries in their local area and get an idea of weather in that area. This project is built with Javascript, Express and hosted on Heroku using Heroku CLI. The search is done utilizing multiple fetches throughout the app. .ENV is utilized in a node-fetch in an express route to ping an API that requires a API key. This data is then fetched within the static JS file.
 
-This application supports the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+What is the MVP? - The minimum viable product for this app is to have an API driven app that can successfully ping and show brewery and weather data based on search parameters.
+
+What are the nice to haves? -  The nice to haves for this project would be more complete styling and branding for the website as a whole and error handlers for when a website is not linkable.
+
+When will the project be complete? - The project will be complete once all the MVP features have been implemented and basic styling has been applied. This project was completed in March 2020 and has since been updated to work as a Express SPA app.
 
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
-$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
+$ git clone https://github.com/sriveragithub/barrel-hop.git # or clone your own fork
+$ cd barrel-hop
 $ npm install
-$ npm start
+$ npm run dev
 ```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```
-$ heroku create
-$ git push heroku main
-$ heroku open
-```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
