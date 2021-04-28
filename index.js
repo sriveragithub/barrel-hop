@@ -1,7 +1,7 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-require('dotenv').config()
 const weatherKey =  process.env.WEATHER_SECRET_API
 const unsplashKey =  process.env.UNSPLASH_API
 
