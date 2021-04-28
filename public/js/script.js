@@ -1,7 +1,3 @@
-// .env variables
-const WEATHER_KEY = weather
-const UN_KEY = unsplash
-
 // Get elements
 let submit = document.getElementById('submit-btn')
 let perPage = document.getElementById('per-page')
@@ -46,7 +42,7 @@ const generateCard = (data) => {
         // Takes the city name from the query of the Open Brewery API, splits it on spaces and rejoins it with a plus so it can be used in the next fetch. Used for searches with city names that have 2 or more words
         let citySearch = data[i].city.split(' ').join('+')
         // This fetch is for grabbing the temperature "feels like" from the Open Weather Map API
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${citySearch}&appid=${WEATHER_KEY}&units=imperial`)
+        fetch(`/weather/city/${citySearch}`)
             .then(res => res.json())
             .then(data => {
                 if (data.message === 'city not found') {
@@ -121,17 +117,17 @@ document.getElementById('state-search').addEventListener("keyup", function(event
 });
 
 // This function sets the background image of the top container (from the Unsplash API)
-const setBackground = (data) => {
-    let backImage = data.results[9].urls.full;
-    $("#container1").css("background-image", `url(${backImage})`);
-}
+// const setBackground = (data) => {
+//     let backImage = data.results[9].urls.full;
+//     $("#container1").css("background-image", `url(${backImage})`);
+// }
 
-// This fetch runs on page load and it queries the Unsplash API and returns data to pass into setBackground
-fetch(`https://api.unsplash.com/search/photos?page=1&query=brewery`, {
-    headers: {
-    'Accept-Version': 'v1',
-    'Authorization': `Client-ID ${UN_KEY}`
-    }
-})
-    .then(res => res.json())
-    .then(data => setBackground(data))
+// // This fetch runs on page load and it queries the Unsplash API and returns data to pass into setBackground
+// fetch(`https://api.unsplash.com/search/photos?page=1&query=brewery`, {
+//     headers: {
+//     'Accept-Version': 'v1',
+//     'Authorization': `Client-ID ${UN_KEY}`
+//     }
+// })
+//     .then(res => res.json())
+//     .then(data => setBackground(data))

@@ -12,6 +12,10 @@ body {
   width: 100vw;
 }
 
+#container1 {
+  background-image: url(../img/barrels.jpg);
+}
+
 h1 {
   margin: 0;
   font-size: 12vw;
