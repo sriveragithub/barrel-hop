@@ -1,3 +1,5 @@
+powerful-citadel-77047.herokuapp.com/
+
 # Barrel Hop - Where is your next adventure?
 
 What is the project? - Barrel Hop is a brewery search app created to allow users to do a quick search of breweries in their local area and get an idea of weather in that area. This project is built with Javascript, Express and hosted on Heroku using Heroku CLI. The search is done utilizing multiple fetches throughout the app. .ENV is utilized in a node-fetch in an express route to ping an API that requires a API key. This data is then fetched within the static JS file.
