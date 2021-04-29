@@ -1,4 +1,4 @@
-powerful-citadel-77047.herokuapp.com/
+[Link to the site!](powerful-citadel-77047.herokuapp.com/)
 
 # Barrel Hop - Where is your next adventure?
 
